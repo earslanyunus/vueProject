@@ -3,6 +3,13 @@
 ## Dershane Sinav Yonetim
  This is my first project with Vue. This project was made with the aim of following the exam of the students of an educational institution. Json-server package is used in backend because I haven't learned node js **yet** :)
 
+
+
+
+https://user-images.githubusercontent.com/75901751/194760413-0a3d6f29-1abb-4c1c-af4e-6661df88e6bd.mov
+
+
+
 I list the packages used below
 ----
 - Style - [Bootstrap](https://getbootstrap.com/)
