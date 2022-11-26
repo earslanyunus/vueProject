@@ -8,7 +8,6 @@ import {Axios} from "@/utils/axios";
 import '@/style.css'
 
 
-
 const app = createApp(App)
 
 app.component("SinavCard",SinavCard)
