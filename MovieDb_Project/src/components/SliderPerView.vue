@@ -40,7 +40,9 @@ const onSlideChange = () => {
             :key="movie.id"
             class=""
         >
-         <movieCard :image="movie.posterUrl"/>
+          <router-link :to="{name:'DetailPage',params:{id:movie.id}}">
+         <movieCard :movie="movie" :image="movie.posterUrl"/>
+          </router-link>
         </swiper-slide>
 
 

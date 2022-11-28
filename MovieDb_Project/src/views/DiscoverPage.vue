@@ -1,13 +1,6 @@
-<template>
-$END$
-</template>
+<script setup>
 
-<script>
-export default {
-name: "DiscoverPage"
-}
 </script>
-
-<style scoped>
-
-</style>
+<template>
+  <h1>Discover</h1>
+</template>

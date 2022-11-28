@@ -26,10 +26,10 @@ const sendMovie = async (link,list)=>{
     const data = await getMovies(link)
     await filterImage(data,list)
 }
-
+const firstGetMovies = async ()=>{
 await sendMovie(`trending/movie/week?api_key=${import.meta.env.VITE_MOVIE_API_KEY}`,TrendImages)
 await sendMovie(`movie/popular?api_key=${import.meta.env.VITE_MOVIE_API_KEY}&language=en-US&page=1`,PopularImages)
 await sendMovie(`movie/top_rated?api_key=${import.meta.env.VITE_MOVIE_API_KEY}&language=en-US&page=1`,TopRatedImages)
-await sendMovie(`movie/upcoming?api_key=${import.meta.env.VITE_MOVIE_API_KEY}&language=en-US&page=1`,ComingSoonImages)
+await sendMovie(`movie/upcoming?api_key=${import.meta.env.VITE_MOVIE_API_KEY}&language=en-US&page=1`,ComingSoonImages)}
 
-export {TrendImages,PopularImages,TopRatedImages,ComingSoonImages}
+export {TrendImages,PopularImages,TopRatedImages,ComingSoonImages,firstGetMovies}

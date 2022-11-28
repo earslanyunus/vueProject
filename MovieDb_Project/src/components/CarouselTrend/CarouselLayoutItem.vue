@@ -1,6 +1,6 @@
 <script setup>
 import {Swiper, SwiperSlide} from "swiper/vue";
-import {Navigation, Scrollbar, A11y} from "swiper";
+import {Navigation, Scrollbar} from "swiper";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -15,7 +15,7 @@ const onSwiperClick = (evt) => {
   const data = toRaw(evt)
 }
 const data = inject('TrendImages')
-const module = [Navigation, Scrollbar, A11y]
+const module = [Navigation, Scrollbar]
 </script>
 
 <template>
@@ -41,13 +41,17 @@ const module = [Navigation, Scrollbar, A11y]
 
 
     >
-      <div class="relative w-full h-full after:content-[''] after:absolute after:left-0 after:top-0 after:w-full after:h-full after:bg-gradient-to-t after:from-[rgba(20,20,20,0.9)]">
-        <img
-            class="object-cover  h-full w-full "
-            :src="item.imageUrl"
-            alt="">
-      </div>
       <div class="absolute top-3/4 left-[10%] font-bold">{{ item.title }}</div>
+      <router-link :to="{name:'DetailPage',params:{id:item.id}}">
+
+        <div
+            class="relative w-full h-full after:content-[''] after:absolute after:left-0 after:top-0 after:w-full after:h-full after:bg-gradient-to-t after:from-[rgba(20,20,20,0.9)]">
+          <img
+              class="object-cover  h-full w-full "
+              :src="item.imageUrl"
+              alt="">
+        </div>
+      </router-link  >
 
     </swiper-slide>
   </swiper>

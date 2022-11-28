@@ -6,7 +6,7 @@ import {
   PopularImages,
   TrendImages,
   TopRatedImages,
-  ComingSoonImages
+  ComingSoonImages, firstGetMovies
 
 } from "../composable/movieHomePage.js";
 import SliderPerView from "../components/SliderPerView.vue";
@@ -14,11 +14,11 @@ import SectionTitle from "../components/SectionTitle.vue";
 
 
 provide('TrendImages', TrendImages)
-
-
+firstGetMovies()
 </script>
 
 <template>
+
   <div class="grid grid-rows-[auto_auto_auto]">
 
 
